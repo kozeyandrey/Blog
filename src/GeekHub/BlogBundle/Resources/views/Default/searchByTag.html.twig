@@ -1,0 +1,13 @@
+{% block content %}
+    {% for article in articles %}
+        <table>
+            <tr>
+                <td>
+                    {{ article.tittle }}<br>
+                    PostedBy: {{ article. }}<br>
+                    {{ article.description }}
+                </td>
+            </tr>
+        </table>
+    {% endfor %}
+{% endblock %}

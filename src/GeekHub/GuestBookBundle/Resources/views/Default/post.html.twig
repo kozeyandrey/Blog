@@ -1,0 +1,18 @@
+<table class="table">
+    <TR>
+        <td width="500px">Запись № {{ post.id }}: {{ post.name }}</td>
+        <td>
+            <a href="/guestbook/post/{{ post.id }}">
+                Просмотр
+            </a>
+        </td>
+    </TR>
+    <TR>
+        <td width="500px"><i>{{ post.description }}</i></td>
+        <td>
+            <a href="/guestbook/delete/{{ post.id }}">
+                Удалить
+            </a>
+        </td>
+    </TR>
+</table>

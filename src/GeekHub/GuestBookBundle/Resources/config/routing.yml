@@ -1,0 +1,9 @@
+main:
+  pattern: /guestbook
+  defaults: { _controller: GeekHubGuestBookBundle:Default:main }
+delete:
+ pattern: /guestbook/delete/{id}
+ defaults: { _controller: GeekHubGuestBookBundle:Default:delete }
+show:
+ pattern: /guestbook/post/{id}
+ defaults: { _controller: GeekHubGuestBookBundle:Default:show }

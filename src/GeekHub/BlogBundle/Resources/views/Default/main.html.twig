@@ -1,0 +1,57 @@
+{% block tittle %}
+    <a>GeekHub Blog Homework</a>
+{% endblock %}
+{% block content %}
+    <table>
+        <TR>
+            <td width="80%"><a href="/index">Головна</a></td>
+        </TR>
+    </table>
+    <table>
+    <tr>
+    <td width="60%"></td>
+    <td width="40%">
+    {% for key,value in tagList %}
+        <a href="/tag/{[ key }}">
+            <font size={{ value*10 }}>
+                {{ key }}&nbsp;
+            </font>
+        </a>
+        </td>
+        </tr>
+        <tr>
+        <td width="60%"></td>
+        <td width="40%">
+        {% for article in mostviewedArticles %}
+            <a href="/article/{{ article.slug }}">
+                {{ article.tittle }}
+            </a>
+            <br>
+            </td>
+            </tr>
+            <tr>
+            <td width="60%"></td>
+            <td width="40%">
+            {% for article in lastArticles %}
+                <a href="/article/{{ article.slug }}">
+                    {{ article.tittle }}
+                </a>
+                <br>
+                </td>
+                </tr>
+                </table>
+                {% for article in paginator %}
+                    <table>
+                    <tr>
+                    <td width="60%">
+                    <a href="/article/{{ article.slug }}">{{ article.tittle }}</a>
+                    <br>
+                    "PostedBy":{{ article.author }}<br>
+                    {{ article.description }}<a href="article/{{ article.slug }}">Читать далее</a><br>
+                    {% for tag in article.tags %}
+                        <a href="/tag/{{ tag }}"> {{ tag }}</a>
+                        </td>
+                        </tr>
+                        </table>
+                    {% endfor %}
+                    {% endblock %}

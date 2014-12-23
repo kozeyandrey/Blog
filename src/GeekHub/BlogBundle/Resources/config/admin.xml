@@ -1,0 +1,33 @@
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="sonata.admin.article" class="GeekHub\BlogBundle\Admin\ArticleAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Article"/>
+            <argument/>
+            <argument>GeekHub\BlogBundle\Entity\Article</argument>
+            <argument/>
+            <call method="setTranslationDomain">
+                <argument>GeekHubBlogBundle</argument>
+            </call>
+        </service>
+        <service id="sonata.admin.tag" class="GeekHub\BlogBundle\Admin\TagAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Tag"/>
+            <argument/>
+            <argument>GeekHub\BlogBundle\Entity\Tag</argument>
+            <argument/>
+            <call method="setTranslationDomain">
+                <argument>GeekHubBlogBundle</argument>
+            </call>
+        </service>
+        <service id="sonata.admin.category" class="GeekHub\BlogBundle\Admin\CategoryAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Category"/>
+            <argument/>
+            <argument>GeekHub\BlogBundle\Entity\Category</argument>
+            <argument/>
+            <call method="setTranslationDomain">
+                <argument>GeekHubBlogBundle</argument>
+            </call>
+        </service>
+    </services>
+</container>

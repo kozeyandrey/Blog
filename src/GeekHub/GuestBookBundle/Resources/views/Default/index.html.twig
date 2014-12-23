@@ -1,0 +1,12 @@
+{% block head %}
+    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css"
+{% endblock %}
+{{ form_start(form) }}
+{% block body %}
+    {{ form_start(form, {action: path('main')}) }}
+    {{ form_widget(form) }}
+    {{ form_rest(form) }}
+    {% for post in pagination %}
+        {{ include('GeekHubGuestBookBundle:Default:post.html.twig',{post: post}) }}
+    {% endfor %}
+{% endblock %}

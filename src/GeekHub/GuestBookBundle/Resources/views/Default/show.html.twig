@@ -1,0 +1,15 @@
+{% block head %}
+    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css"
+{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-4">
+            <strong>{{ post.name }}</strong>
+        </div>
+        <br>
+
+        <div class="col-md-6">
+            {{ post.content }}
+        </div>
+    </div>
+{% endblock %}

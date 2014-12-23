@@ -1,0 +1,9 @@
+geek_hub_blog_homepage:
+    pattern:  /
+    defaults: { _controller: GeekHubBlogBundle:Default:index }
+view_article:
+    pattern: /article/{slug}
+    defaults: { _controller: GeekHubBlogBundle:Default:viewArticle }
+find_by_tag:
+    pattern: /tag/{tag}
+    defaults: { _controller: GeekHubBlogBundle:Default:findByTag }
